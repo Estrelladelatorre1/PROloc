@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #47082c;
+            text-align: center;
+        }
+        h1 {
+            color: #b22064;
+        }
+        form {
+            margin-top: 50px;
+        }
+        input[type="number"], select, button {
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid #670c59;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #af4c7a;
+            color: rgb(111, 22, 70);
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #a0456c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form action="/calculate" method="post">
+        <input type="number" name="num1" placeholder="Primer Numero" required>
+        <select name="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">×</option>
+            <option value="divide">÷</option>
+        </select>
+        <input type="number" name="num2" placeholder="Segundo Numero" required>
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
