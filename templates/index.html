@@ -3,49 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #47082c;
-            text-align: center;
-        }
-        h1 {
-            color: #b22064;
-        }
-        form {
-            margin-top: 50px;
-        }
-        input[type="number"], select, button {
-            padding: 10px;
-            margin: 5px;
-            border: 2px solid #670c59;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #af4c7a;
-            color: rgb(111, 22, 70);
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #a0456c;
-        }
-    </style>
+    <title>Operadores y Ejemplos</title>
 </head>
 <body>
-    <h1>Calculator</h1>
-    <form action="/calculate" method="post">
-        <input type="number" name="num1" placeholder="Primer Numero" required>
-        <select name="operation">
-            <option value="add">+</option>
-            <option value="subtract">-</option>
-            <option value="multiply">×</option>
-            <option value="divide">÷</option>
-        </select>
-        <input type="number" name="num2" placeholder="Segundo Numero" required>
-        <button type="submit">Calculate</button>
-    </form>
+    <h1>Operadores Comunes en Ruby</h1>
+    <ul>
+        <li>Operadores Aritméticos:
+            <ul>
+                <li>+: Suma</li>
+                <li>-: Resta</li>
+                <li>*: Multiplicación</li>
+                <li>/: División</li>
+                <li>%: Módulo (resto de la división)</li>
+                <li>**: Potencia</li>
+            </ul>
+        </li>
+        <li>Operadores de Comparación:
+            <ul>
+                <li>==: Igual a</li>
+                <li>!=: Diferente de</li>
+                <li>&gt;: Mayor que</li>
+                <li>&lt;: Menor que</li>
+                <li>&gt;=: Mayor o igual que</li>
+                <li>&lt;=: Menor o igual que</li>
+            </ul>
+        </li>
+        <li>Operadores Lógicos:
+            <ul>
+                <li>&amp;&amp;: AND lógico</li>
+                <li>||: OR lógico</li>
+                <li>!: NOT lógico</li>
+            </ul>
+        </li>
+        <li>Operadores de Asignación:
+            <ul>
+                <li>=: Asignación simple</li>
+                <li>+=, -=, *=, /=, %=, **=: Operadores de asignación abreviados</li>
+            </ul>
+        </li>
+        <li>Operadores de Rango:
+            <ul>
+                <li>..: Inclusivo (incluye el último valor)</li>
+                <li>...: Exclusivo (excluye el último valor)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Ejemplos de Árboles y Rangos</h2>
+    <p>Ejemplo de un árbol en Ruby:</p>
+    <pre>
+        tree = {
+            value: 10,
+            left: {
+                value: 5,
+                left: nil,
+                right: nil
+            },
+            right: {
+                value: 15,
+                left: nil,
+                right: nil
+            }
+        }
+    </pre>
+    <p>Ejemplo de un rango inclusivo:</p>
+    <pre>(1..10).to_a  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</pre>
+    <p>Ejemplo de un rango exclusivo:</p>
+    <pre>(1...10).to_a  # [1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
 </body>
 </html>

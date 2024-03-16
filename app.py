@@ -1,37 +1,29 @@
-from flask import Flask, request, render_template
+def get_operators_and_examples():
+    operators = {
+        'Operadores Aritméticos': ['+', '-', '*', '/', '%', '**'],
+        'Operadores de Comparación': ['==', '!=', '>', '<', '>=', '<='],
+        'Operadores Lógicos': ['&&', '||', '!'],
+        'Operadores de Asignación': ['=', '+=', '-=', '*=', '/=', '%=', '**='],
+        'Operadores de Rango': ['..', '...']
+    }
 
-app = Flask(__name__)
+    tree_example = """
+    tree = {
+        value: 10,
+        left: {
+            value: 5,
+            left: nil,
+            right: nil
+        },
+        right: {
+            value: 15,
+            left: nil,
+            right: nil
+        }
+    }
+    """
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+    inclusive_range_example = "(1..10).to_a  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+    exclusive_range_example = "(1...10).to_a  # [1, 2, 3, 4, 5, 6, 7, 8, 9]"
 
-@app.route('/calculate', methods=['POST'])
-def calculate():
-    if request.method == 'POST':
-        num1 = float(request.form['num1'])
-        num2 = float(request.form['num2'])
-        operation = request.form['operation']
-
-        if operation == 'add':
-            result = num1 + num2
-            operation_sign = '+'
-        elif operation == 'subtract':
-            result = num1 - num2
-            operation_sign = '-'
-        elif operation == 'multiply':
-            result = num1 * num2
-            operation_sign = '×'
-        elif operation == 'divide':
-            if num2 != 0:
-                result = num1 / num2
-                operation_sign = '÷'
-            else:
-                return "Cannot divide by zero!"
-        else:
-            return "Invalid operation"
-
-        return render_template('result.html', num1=num1, num2=num2, operation_sign=operation_sign, result=result)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    return operators, tree_example, inclusive_range_example, exclusive_range_example
