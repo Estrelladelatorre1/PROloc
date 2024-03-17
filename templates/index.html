@@ -3,72 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operadores y Ejemplos</title>
+    <title>Calculador *Estrella*</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9e1e1; /* Fondo rosa claro */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #e45c5c; /* Rojo rosado */
+            margin-top: 20px;
+        }
+        form {
+            margin-top: 30px;
+            display: inline-block;
+            width: 300px;
+        }
+        input[type="number"], select, button {
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid #e45c5c; /* Borde rojo rosado */
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #fde5e5; /* Fondo rosa claro más claro */
+        }
+        button {
+            background-color: #f18c8c; /* Botón rosa */
+            color: #ffffff; /* Texto blanco */
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e45c5c; /* Cambio de color al pasar el mouse */
+        }
+    </style>
 </head>
 <body>
-    <h1>Operadores Comunes en Ruby</h1>
-    <ul>
-        <li>Operadores Aritméticos:
-            <ul>
-                <li>+: Suma</li>
-                <li>-: Resta</li>
-                <li>*: Multiplicación</li>
-                <li>/: División</li>
-                <li>%: Módulo (resto de la división)</li>
-                <li>**: Potencia</li>
-            </ul>
-        </li>
-        <li>Operadores de Comparación:
-            <ul>
-                <li>==: Igual a</li>
-                <li>!=: Diferente de</li>
-                <li>&gt;: Mayor que</li>
-                <li>&lt;: Menor que</li>
-                <li>&gt;=: Mayor o igual que</li>
-                <li>&lt;=: Menor o igual que</li>
-            </ul>
-        </li>
-        <li>Operadores Lógicos:
-            <ul>
-                <li>&amp;&amp;: AND lógico</li>
-                <li>||: OR lógico</li>
-                <li>!: NOT lógico</li>
-            </ul>
-        </li>
-        <li>Operadores de Asignación:
-            <ul>
-                <li>=: Asignación simple</li>
-                <li>+=, -=, *=, /=, %=, **=: Operadores de asignación abreviados</li>
-            </ul>
-        </li>
-        <li>Operadores de Rango:
-            <ul>
-                <li>..: Inclusivo (incluye el último valor)</li>
-                <li>...: Exclusivo (excluye el último valor)</li>
-            </ul>
-        </li>
-    </ul>
-
-    <h2>Ejemplos de Árboles y Rangos</h2>
-    <p>Ejemplo de un árbol en Ruby:</p>
-    <pre>
-        tree = {
-            value: 10,
-            left: {
-                value: 5,
-                left: nil,
-                right: nil
-            },
-            right: {
-                value: 15,
-                left: nil,
-                right: nil
-            }
-        }
-    </pre>
-    <p>Ejemplo de un rango inclusivo:</p>
-    <pre>(1..10).to_a  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</pre>
-    <p>Ejemplo de un rango exclusivo:</p>
-    <pre>(1...10).to_a  # [1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
+    <h1>+Calculador *Estrella*+</h1>
+    <form action="/calculateFuncionesPuras" method="post">
+        <div>
+            <h2>2.2 Funciones - Funciones Puras</h2>
+            <input type="number" name="num1" placeholder="Primer Numero" required>
+            <select name="operation">
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">×</option>
+                <option value="divide">÷</option>
+            </select>
+            <input type="number" name="num2" placeholder="Segundo Numero" required>
+            <button type="submit">Calculate</button>
+        </div>
+    </form>
+    <form action="/calculateFuncionesDeOrdenSuperior" method="post"> 
+        <div>
+            <h2>2.2 Funciones - Funciones de orden superior</h2>
+            <input type="number" name="num1" placeholder="Primer Numero" required>
+            <select name="operation">
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">×</option>
+                <option value="divide">÷</option>
+            </select>
+            <input type="number" name="num2" placeholder="Segundo Numero" required>
+            <button type="submit">Calculate</button>
+        </div>
+    </form> 
+    <form action="/calculateIntervalos" method="post"> 
+        <div>
+            <h2>2.3 Intervalos</h2>
+            <input type="number" name="num1" placeholder="Primer Numero" required>
+            <input type="number" name="num2" placeholder="Segundo Numero" required>
+            <button type="submit">Calculate</button>
+        </div>
+    </form> 
+    <form action="/calculateOperadores" method="post"> 
+        <div>
+            <h2>2.4 Operadores</h2>
+            <input type="number" name="num1" placeholder="Primer Numero" required>
+            <input type="number" name="num2" placeholder="Segundo Numero" required>
+            <button type="submit">Calculate</button>
+        </div>
+    </form> 
+    <form action="/calculateAplicacionesDeLasListas" method="post">  
+        <div>
+            <h2>2.5 Aplicaciones de las listas</h2>
+            <input name="num1" placeholder="agregar separar comas" required>
+            <button type="submit">Calculate</button>
+        </div>
+    </form> 
+    <form action="/calculateArbol" method="post">  
+        <div>
+            <h2>2.6 Arbol</h2>
+            <input name="num1" placeholder="Primer Numero" required>            
+            <button type="submit">Calculate</button>
+        </div>
+    </form> 
+    <form action="/calculateEvPerezosa" method="post">  
+        <div>
+            <h2>2.7 Ev perezosa</h2>
+            <input type="number" name="num1" placeholder="Primer Numero" required>
+            <select name="operation">
+                <option value="add">+</option>
+            </select>
+            <input type="number" name="num2" placeholder="Segundo Numero" required>
+            <button type="submit">Calculate</button>
+        </div>
+    </form> 
 </body>
 </html>

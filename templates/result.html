@@ -7,28 +7,52 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f9e1e1; /* Fondo rosa claro */
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
         h1 {
-            color: #333;
+            color: #e45c5c; /* Rojo rosado */
+            margin-top: 20px;
         }
         .result-box {
             margin-top: 50px;
             padding: 20px;
-            border: 2px solid #ccc;
+            border: 2px solid #e45c5c; /* Borde rojo rosado */
             border-radius: 5px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            background-color: #fff; /* Fondo blanco */
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Sombra suave */
+            display: inline-block;
+        }
+        .result-text {
+            color: #e45c5c; /* Texto rosa */
+            font-size: 24px;
+            font-weight: bold; /* Texto en negrita */
+        }
+        button {
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #e45c5c; /* Botón rosa */
+            color: #fff; /* Texto blanco */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d4386e; /* Cambio de color al pasar el mouse */
         }
     </style>
 </head>
 <body>
     <h1>Result</h1>
     <div class="result-box">
-        <p>
+        <p class="result-text">
             {{ num1 }} {{ operation_sign }} {{ num2 }} = {{ result }}
         </p>
     </div>
+    <button onclick="window.history.back();">Back</button>
 </body>
 </html>
+
